@@ -14,25 +14,46 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$posts = [
-   1 => [
-        "name" => "maulana",
-        "umur" => 22
+$currency = [
+    [
+        "name" => "USD",
+        "id" => "1"
+   
     ],
-    2 =>[
-        "name" => "irfan",
-        "umur" => 22
+    [
+        "name" => "AED",
+        "id" => "2"
+    ],   [
+        "name" => "RPH",
+        "id" => "3"
     ]
     ];
 
-$postss = [
-   1 => [
-        "name" => "irfan",
-        "umur" => 22
+$uom = [
+  [
+        "name" => "SHP",
+        "id" => "1"
     ],
-    2 =>[
-        "name" => "maulana",
-        "umur" => 22
+    [
+        "name" => "PHS",
+        "id" => "2"
+    ], [
+        "name" => "HSP",
+        "id" => "3"
+    ]
+    ];
+
+$charge =[
+  [
+        "name" => "Option 1",
+        "id" => "1"
+    ],
+    [
+        "name" => "Option 2",
+        "id" => "2"
+    ], [
+        "name" => "Option 3",
+        "id" => "3"
     ]
     ];
 
@@ -44,10 +65,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
 // });
 
-Route::get('json',function() use($posts) {
-    return response()->json($posts);
-})->name('json');
+Route::get('currency',function() use($currency) {
+    return response()->json($currency);
+})->name('currency');
 
-Route::get('jsonn',function() use($postss) {
-    return response()->json($postss);
-})->name('jsonn');
+Route::get('uom',function() use($uom) {
+    return response()->json($uom);
+})->name('uom');
+
+Route::get('charge',function() use($charge) {
+    return response()->json($charge);
+})->name('charge');
