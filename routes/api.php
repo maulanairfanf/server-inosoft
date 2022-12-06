@@ -14,46 +14,72 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$currency = [
+$currency = [[
     [
         "name" => "USD",
-        "id" => "1"
+        "id" => "1",        "selected" => true,
+
    
     ],
     [
         "name" => "AED",
-        "id" => "2"
+        "id" => "2",        "selected" => false,
+
     ],   [
         "name" => "RPH",
-        "id" => "3"
-    ]
+        "id" => "3",        "selected" => false,
+
+    ]],[
+    [
+        "name" => "USD",
+        "id" => "1",        "selected" => false,
+
+   
+    ],
+    [
+        "name" => "AED",
+        "id" => "2",        "selected" => true,
+
+    ],   [
+        "name" => "RPH",
+        "id" => "3",        "selected" => false,
+
+    ]]
     ];
 
 $uom = [
   [
         "name" => "SHP",
-        "id" => "1"
+        "id" => "1",
+        "selected" => true,
     ],
     [
         "name" => "PHS",
-        "id" => "2"
+        "id" => "2",
+        "selected" => false,
+
     ], [
         "name" => "HSP",
-        "id" => "3"
+        "id" => "3",
+        "selected" => false,
+
     ]
     ];
 
 $charge =[
   [
         "name" => "Option 1",
-        "id" => "1"
+        "id" => "1",
+        "selected" => false,
     ],
     [
         "name" => "Option 2",
-        "id" => "2"
+        "id" => "2",
+        "selected" => false,
     ], [
         "name" => "Option 3",
-        "id" => "3"
+        "id" => "3",
+        "selected" => false,
     ]
     ];
 
